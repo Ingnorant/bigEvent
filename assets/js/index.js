@@ -42,7 +42,7 @@ $(function () {
         e.preventDefault()
         var data = $(this).serialize()
         console.log(data);
-        $.post("api/login", data, function (res) {
+        $.post("/api/login", data, function (res) {
             if (res.status !== 0) {
                 return layer.msg(res.msg)
             }
